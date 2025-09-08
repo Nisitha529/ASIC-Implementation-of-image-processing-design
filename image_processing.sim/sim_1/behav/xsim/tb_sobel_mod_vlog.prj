@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../image_processing.srcs/sources_1/new/fifo_double_line_buffer.v" \
+"../../../../image_processing.srcs/sources_1/new/fifo_single_line_buffer.v" \
+"../../../../image_processing.srcs/sources_1/new/grayscale_to_rgb.v" \
+"../../../../image_processing.srcs/sources_1/new/rgb_to_grascale.v" \
+"../../../../image_processing.srcs/sources_1/new/sobel_calc.v" \
+"../../../../image_processing.srcs/sources_1/new/sobel_data_buffer.v" \
+"../../../../image_processing.srcs/sources_1/new/sobel_data_modulate.v" \
+"../../../../image_processing.srcs/sources_1/new/sobel_kernel.v" \
+"../../../../image_processing.srcs/sources_1/new/sobel_mod.v" \
+"../../../../image_processing.srcs/sim_1/new/tb_sobel_mod.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

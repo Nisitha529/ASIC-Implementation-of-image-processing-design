@@ -1,0 +1,1 @@
+lvs {/openlane/designs/image_proc/runs/first_run/results/signoff/fpga_sobel_top.spice fpga_sobel_top} {/openlane/designs/image_proc/runs/first_run/tmp/signoff/36-fpga_sobel_top.pnl.v fpga_sobel_top} /root/.ciel/sky130A/libs.tech/netgen/sky130A_setup.tcl /openlane/designs/image_proc/runs/first_run/logs/signoff/39-fpga_sobel_top.lef.lvs.log -json

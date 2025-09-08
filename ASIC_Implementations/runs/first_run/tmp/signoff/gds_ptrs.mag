@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 439539 441683
+string GDS_END 54547656
+string GDS_FILE /openlane/designs/image_proc/runs/first_run/results/signoff/fpga_sobel_top.magic.gds
+string GDS_START 823944
+<< end >>

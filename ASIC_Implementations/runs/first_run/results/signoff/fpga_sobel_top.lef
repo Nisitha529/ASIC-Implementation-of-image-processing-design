@@ -1,0 +1,576 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO fpga_sobel_top
+  CLASS BLOCK ;
+  FOREIGN fpga_sobel_top ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 2197.695 BY 2208.415 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 24.340 10.640 25.940 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 177.940 10.640 179.540 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 331.540 10.640 333.140 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 485.140 10.640 486.740 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 638.740 10.640 640.340 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 792.340 10.640 793.940 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 945.940 10.640 947.540 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1099.540 10.640 1101.140 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1253.140 10.640 1254.740 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1406.740 10.640 1408.340 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1560.340 10.640 1561.940 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1713.940 10.640 1715.540 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1867.540 10.640 1869.140 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 2021.140 10.640 2022.740 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 2174.740 10.640 2176.340 2195.280 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 30.030 2192.140 31.630 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 183.210 2192.140 184.810 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 336.390 2192.140 337.990 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 489.570 2192.140 491.170 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 642.750 2192.140 644.350 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 795.930 2192.140 797.530 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 949.110 2192.140 950.710 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1102.290 2192.140 1103.890 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1255.470 2192.140 1257.070 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1408.650 2192.140 1410.250 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1561.830 2192.140 1563.430 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1715.010 2192.140 1716.610 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1868.190 2192.140 1869.790 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 2021.370 2192.140 2022.970 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 2174.550 2192.140 2176.150 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 21.040 10.640 22.640 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 174.640 10.640 176.240 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 328.240 10.640 329.840 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 481.840 10.640 483.440 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 635.440 10.640 637.040 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 789.040 10.640 790.640 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 942.640 10.640 944.240 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1096.240 10.640 1097.840 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1249.840 10.640 1251.440 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1403.440 10.640 1405.040 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1557.040 10.640 1558.640 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1710.640 10.640 1712.240 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1864.240 10.640 1865.840 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 2017.840 10.640 2019.440 2195.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 2171.440 10.640 2173.040 2195.280 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 26.730 2192.140 28.330 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 179.910 2192.140 181.510 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 333.090 2192.140 334.690 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 486.270 2192.140 487.870 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 639.450 2192.140 641.050 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 792.630 2192.140 794.230 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 945.810 2192.140 947.410 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1098.990 2192.140 1100.590 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1252.170 2192.140 1253.770 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1405.350 2192.140 1406.950 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1558.530 2192.140 1560.130 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1711.710 2192.140 1713.310 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 1864.890 2192.140 1866.490 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 2018.070 2192.140 2019.670 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 2171.250 2192.140 2172.850 ;
+    END
+  END VPWR
+  PIN cam_data_i[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 2193.695 1479.040 2197.695 1479.640 ;
+    END
+  END cam_data_i[0]
+  PIN cam_data_i[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 1107.770 0.000 1108.050 4.000 ;
+    END
+  END cam_data_i[1]
+  PIN cam_data_i[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 1751.040 4.000 1751.640 ;
+    END
+  END cam_data_i[2]
+  PIN cam_data_i[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 2193.695 1186.640 2197.695 1187.240 ;
+    END
+  END cam_data_i[3]
+  PIN cam_data_i[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 1503.830 2204.415 1504.110 2208.415 ;
+    END
+  END cam_data_i[4]
+  PIN cam_data_i[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 1661.610 0.000 1661.890 4.000 ;
+    END
+  END cam_data_i[5]
+  PIN cam_data_i[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 289.040 4.000 289.640 ;
+    END
+  END cam_data_i[6]
+  PIN cam_data_i[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 2193.695 2063.840 2197.695 2064.440 ;
+    END
+  END cam_data_i[7]
+  PIN cam_rst_o
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 1780.750 2204.415 1781.030 2208.415 ;
+    END
+  END cam_rst_o
+  PIN href_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 2193.695 601.840 2197.695 602.440 ;
+    END
+  END href_i
+  PIN pclk_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END pclk_i
+  PIN sio_c_o
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 1938.530 0.000 1938.810 4.000 ;
+    END
+  END sio_c_o
+  PIN sio_d_io
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.782000 ;
+    PORT
+      LAYER met2 ;
+        RECT 2057.670 2204.415 2057.950 2208.415 ;
+    END
+  END sio_d_io
+  PIN sys_clk_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.742500 ;
+    PORT
+      LAYER met2 ;
+        RECT 553.930 0.000 554.210 4.000 ;
+    END
+  END sys_clk_i
+  PIN sys_rst_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.742500 ;
+    PORT
+      LAYER met2 ;
+        RECT 673.070 2204.415 673.350 2208.415 ;
+    END
+  END sys_rst_i
+  PIN vga_blue[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 873.840 4.000 874.440 ;
+    END
+  END vga_blue[0]
+  PIN vga_blue[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 581.440 4.000 582.040 ;
+    END
+  END vga_blue[1]
+  PIN vga_blue[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 2193.695 17.040 2197.695 17.640 ;
+    END
+  END vga_blue[2]
+  PIN vga_blue[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 1458.640 4.000 1459.240 ;
+    END
+  END vga_blue[3]
+  PIN vga_green[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 277.010 0.000 277.290 4.000 ;
+    END
+  END vga_green[0]
+  PIN vga_green[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 396.150 2204.415 396.430 2208.415 ;
+    END
+  END vga_green[1]
+  PIN vga_green[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 2193.695 309.440 2197.695 310.040 ;
+    END
+  END vga_green[2]
+  PIN vga_green[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 830.850 0.000 831.130 4.000 ;
+    END
+  END vga_green[3]
+  PIN vga_red[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 2043.440 4.000 2044.040 ;
+    END
+  END vga_red[0]
+  PIN vga_red[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 2193.695 1771.440 2197.695 1772.040 ;
+    END
+  END vga_red[1]
+  PIN vga_red[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 949.990 2204.415 950.270 2208.415 ;
+    END
+  END vga_red[2]
+  PIN vga_red[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 1226.910 2204.415 1227.190 2208.415 ;
+    END
+  END vga_red[3]
+  PIN vga_xvalid
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 1384.690 0.000 1384.970 4.000 ;
+    END
+  END vga_xvalid
+  PIN vga_yvalid
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 1166.240 4.000 1166.840 ;
+    END
+  END vga_yvalid
+  PIN vsync_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 119.230 2204.415 119.510 2208.415 ;
+    END
+  END vsync_i
+  PIN xvclk_o
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met3 ;
+        RECT 2193.695 894.240 2197.695 894.840 ;
+    END
+  END xvclk_o
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 2191.900 2195.125 ;
+      LAYER met1 ;
+        RECT 4.670 10.640 2191.900 2195.280 ;
+      LAYER met2 ;
+        RECT 4.690 2204.135 118.950 2204.970 ;
+        RECT 119.790 2204.135 395.870 2204.970 ;
+        RECT 396.710 2204.135 672.790 2204.970 ;
+        RECT 673.630 2204.135 949.710 2204.970 ;
+        RECT 950.550 2204.135 1226.630 2204.970 ;
+        RECT 1227.470 2204.135 1503.550 2204.970 ;
+        RECT 1504.390 2204.135 1780.470 2204.970 ;
+        RECT 1781.310 2204.135 2057.390 2204.970 ;
+        RECT 2058.230 2204.135 2190.430 2204.970 ;
+        RECT 4.690 4.280 2190.430 2204.135 ;
+        RECT 4.690 3.670 276.730 4.280 ;
+        RECT 277.570 3.670 553.650 4.280 ;
+        RECT 554.490 3.670 830.570 4.280 ;
+        RECT 831.410 3.670 1107.490 4.280 ;
+        RECT 1108.330 3.670 1384.410 4.280 ;
+        RECT 1385.250 3.670 1661.330 4.280 ;
+        RECT 1662.170 3.670 1938.250 4.280 ;
+        RECT 1939.090 3.670 2190.430 4.280 ;
+      LAYER met3 ;
+        RECT 4.000 2064.840 2193.695 2195.205 ;
+        RECT 4.000 2063.440 2193.295 2064.840 ;
+        RECT 4.000 2044.440 2193.695 2063.440 ;
+        RECT 4.400 2043.040 2193.695 2044.440 ;
+        RECT 4.000 1772.440 2193.695 2043.040 ;
+        RECT 4.000 1771.040 2193.295 1772.440 ;
+        RECT 4.000 1752.040 2193.695 1771.040 ;
+        RECT 4.400 1750.640 2193.695 1752.040 ;
+        RECT 4.000 1480.040 2193.695 1750.640 ;
+        RECT 4.000 1478.640 2193.295 1480.040 ;
+        RECT 4.000 1459.640 2193.695 1478.640 ;
+        RECT 4.400 1458.240 2193.695 1459.640 ;
+        RECT 4.000 1187.640 2193.695 1458.240 ;
+        RECT 4.000 1186.240 2193.295 1187.640 ;
+        RECT 4.000 1167.240 2193.695 1186.240 ;
+        RECT 4.400 1165.840 2193.695 1167.240 ;
+        RECT 4.000 895.240 2193.695 1165.840 ;
+        RECT 4.000 893.840 2193.295 895.240 ;
+        RECT 4.000 874.840 2193.695 893.840 ;
+        RECT 4.400 873.440 2193.695 874.840 ;
+        RECT 4.000 602.840 2193.695 873.440 ;
+        RECT 4.000 601.440 2193.295 602.840 ;
+        RECT 4.000 582.440 2193.695 601.440 ;
+        RECT 4.400 581.040 2193.695 582.440 ;
+        RECT 4.000 310.440 2193.695 581.040 ;
+        RECT 4.000 309.040 2193.295 310.440 ;
+        RECT 4.000 290.040 2193.695 309.040 ;
+        RECT 4.400 288.640 2193.695 290.040 ;
+        RECT 4.000 18.040 2193.695 288.640 ;
+        RECT 4.000 16.640 2193.295 18.040 ;
+        RECT 4.000 10.715 2193.695 16.640 ;
+      LAYER met4 ;
+        RECT 1202.735 523.775 1249.440 717.225 ;
+        RECT 1251.840 523.775 1252.740 717.225 ;
+        RECT 1255.140 523.775 1352.105 717.225 ;
+  END
+END fpga_sobel_top
+END LIBRARY
+

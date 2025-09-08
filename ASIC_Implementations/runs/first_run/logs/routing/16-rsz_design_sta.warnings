@@ -1,0 +1,30 @@
+[WARNING GRT-0026] Missing route to pin _1720_/X.
+[WARNING GRT-0026] Missing route to pin _1359_/A.
+[WARNING GRT-0026] Missing route to pin _1299_/A.
+[WARNING GRT-0026] Missing route to pin _1050_/X.
+[WARNING GRT-0026] Missing route to pin _1206_/X.
+[WARNING GRT-0026] Missing route to pin _1515_/B.
+[WARNING GRT-0026] Missing route to pin _1488_/A.
+[WARNING GRT-0026] Missing route to pin _1242_/X.
+[WARNING GRT-0026] Missing route to pin _1487_/B1.
+[WARNING GRT-0026] Missing route to pin wire3/A.
+[WARNING GRT-0026] Missing route to pin max_cap2/A.
+[WARNING GRT-0026] Missing route to pin _1630_/A.
+[WARNING GRT-0026] Missing route to pin _1557_/A.
+[WARNING GRT-0026] Missing route to pin wire6/A.
+[WARNING GRT-0026] Missing route to pin _1304_/X.
+[WARNING GRT-0026] Missing route to pin _1345_/X.
+[WARNING GRT-0026] Missing route to pin _1359_/B.
+[WARNING GRT-0026] Missing route to pin _1359_/C_N.
+[WARNING GRT-0026] Missing route to pin _1557_/B.
+[WARNING GRT-0026] Missing route to pin wire1/A.
+[WARNING GRT-0026] Missing route to pin _1630_/B.
+[WARNING GRT-0026] Missing route to pin max_cap4/A.
+[WARNING GRT-0026] Missing route to pin _1557_/Y.
+[WARNING GRT-0026] Missing route to pin _1252_/A.
+[WARNING GRT-0026] Missing route to pin output4/X.
+[WARNING GRT-0026] Missing route to pin max_cap13/X.
+[WARNING GRT-0026] Missing route to pin _0975_/A.
+Warning: There are 105 unclocked register/latch pins.
+Warning: There are 122 unconstrained endpoints.
+[WARNING] Did not save OpenROAD database!

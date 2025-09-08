@@ -1,0 +1,225 @@
+library (fpga_sobel_top) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,pF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1A";
+  pulling_resistance_unit        : "1kohm";
+  time_unit                      : "1ns";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 20;
+  slew_lower_threshold_pct_fall : 20;
+  slew_upper_threshold_pct_rise : 80;
+  slew_upper_threshold_pct_fall : 80;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 100.0;
+  nom_voltage                    : 1.60;
+
+  lu_table_template(template_1) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00050,  0.00153,  0.00471,  0.01445,  0.04434,  0.13605,  0.41749");
+  }
+  type ("cam_data_i") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 8;
+    bit_from : 7;
+    bit_to : 0;
+  }
+  type ("vga_blue") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 4;
+    bit_from : 3;
+    bit_to : 0;
+  }
+  type ("vga_green") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 4;
+    bit_from : 3;
+    bit_to : 0;
+  }
+  type ("vga_red") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 4;
+    bit_from : 3;
+    bit_to : 0;
+  }
+
+  cell ("fpga_sobel_top") {
+    pin("cam_rst_o") {
+      direction : output;
+      capacitance : 0.0011;
+    }
+    pin("href_i") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("pclk_i") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("sio_c_o") {
+      direction : output;
+      capacitance : 0.0010;
+    }
+    pin("sio_d_io") {
+      direction : inout;
+      capacitance : 0.2460;
+    }
+    pin("sys_clk_i") {
+      direction : input;
+      capacitance : 0.0082;
+    }
+    pin("sys_rst_i") {
+      direction : input;
+      capacitance : 0.0089;
+    }
+    pin("vga_xvalid") {
+      direction : output;
+      capacitance : 0.0011;
+    }
+    pin("vga_yvalid") {
+      direction : output;
+      capacitance : 0.0008;
+    }
+    pin("vsync_i") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("xvclk_o") {
+      direction : output;
+      capacitance : 0.0006;
+      timing() {
+        related_pin : "sys_clk_i";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          values("1.77737,1.78177,1.79205,1.81739,1.89075,2.11670,2.80535");
+	}
+	rise_transition(template_1) {
+          values("0.01620,0.01955,0.02906,0.06064,0.16607,0.49684,1.50970");
+	}
+	cell_fall(template_1) {
+          values("1.58696,1.59038,1.59839,1.61536,1.65350,1.75834,2.07874");
+	}
+	fall_transition(template_1) {
+          values("0.01380,0.01606,0.02188,0.03572,0.07680,0.21199,0.63944");
+	}
+      }
+    }
+    bus("cam_data_i") {
+      bus_type : cam_data_i;
+      direction : input;
+      capacitance : 0.0000;
+    pin("cam_data_i[7]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("cam_data_i[6]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("cam_data_i[5]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("cam_data_i[4]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("cam_data_i[3]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("cam_data_i[2]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("cam_data_i[1]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("cam_data_i[0]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    }
+    bus("vga_blue") {
+      bus_type : vga_blue;
+      direction : output;
+      capacitance : 0.0000;
+    pin("vga_blue[3]") {
+      direction : output;
+      capacitance : 0.0006;
+    }
+    pin("vga_blue[2]") {
+      direction : output;
+      capacitance : 0.0005;
+    }
+    pin("vga_blue[1]") {
+      direction : output;
+      capacitance : 0.0008;
+    }
+    pin("vga_blue[0]") {
+      direction : output;
+      capacitance : 0.0007;
+    }
+    }
+    bus("vga_green") {
+      bus_type : vga_green;
+      direction : output;
+      capacitance : 0.0000;
+    pin("vga_green[3]") {
+      direction : output;
+      capacitance : 0.0011;
+    }
+    pin("vga_green[2]") {
+      direction : output;
+      capacitance : 0.0007;
+    }
+    pin("vga_green[1]") {
+      direction : output;
+      capacitance : 0.0012;
+    }
+    pin("vga_green[0]") {
+      direction : output;
+      capacitance : 0.0010;
+    }
+    }
+    bus("vga_red") {
+      bus_type : vga_red;
+      direction : output;
+      capacitance : 0.0000;
+    pin("vga_red[3]") {
+      direction : output;
+      capacitance : 0.0012;
+    }
+    pin("vga_red[2]") {
+      direction : output;
+      capacitance : 0.0012;
+    }
+    pin("vga_red[1]") {
+      direction : output;
+      capacitance : 0.0005;
+    }
+    pin("vga_red[0]") {
+      direction : output;
+      capacitance : 0.0007;
+    }
+    }
+  }
+
+}

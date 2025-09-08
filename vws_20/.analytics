@@ -1,0 +1,23 @@
+timestamp=[2025-09-07 16:26:22], mode=WORKBENCH_START, duration=0:00:52.426, duration_ms=52426, data={}
+timestamp=[2025-09-07 16:26:29], mode=WORKBENCH_UI_INIT, duration=0:00:06.748, duration_ms=6748, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-09-07 16:27:07], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:38.847, duration_ms=38847, data={}
+timestamp=[2025-09-07 16:28:18], mode=PLATFORM_CREATION, duration=0:00:38.709, duration_ms=38709, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2025-09-07 16:30:48], mode=PLATFORM_GENERATION, duration=0:00:42.384, duration_ms=42384, data={name=plt_img_proc}
+timestamp=[2025-09-07 16:34:09], mode=APP_CREATION, duration=0:00:16.170, duration_ms=16170, data={name=app_img_proc, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=plt_img_proc, application_type=application}
+timestamp=[2025-09-07 16:34:34], mode=BUILD, duration=0:00:12.846, duration_ms=12846, data={name=app_img_proc_system, configuration=Debug, clean_build=false}
+timestamp=[2025-09-07 16:47:29], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.178, duration_ms=178, data={}
+timestamp=[2025-09-07 16:47:30], mode=WORKBENCH_START, duration=0:00:38.591, duration_ms=38591, data={}
+timestamp=[2025-09-07 16:47:34], mode=WORKBENCH_UI_INIT, duration=0:00:04.205, duration_ms=4205, data={editors_count=3, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app_img_proc,app_img_proc_system,plt_img_proc}
+timestamp=[2025-09-07 16:51:12], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.203, duration_ms=203, data={}
+timestamp=[2025-09-07 16:51:13], mode=WORKBENCH_START, duration=0:00:24.609, duration_ms=24609, data={}
+timestamp=[2025-09-07 16:51:15], mode=WORKBENCH_UI_INIT, duration=0:00:01.868, duration_ms=1868, data={editors_count=3, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app_img_proc,app_img_proc_system,plt_img_proc}
+timestamp=[2025-09-07 16:54:29], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.224, duration_ms=224, data={}
+timestamp=[2025-09-07 16:54:31], mode=WORKBENCH_START, duration=0:00:16.571, duration_ms=16571, data={}
+timestamp=[2025-09-07 16:54:32], mode=WORKBENCH_UI_INIT, duration=0:00:00.756, duration_ms=756, data={editors_count=3, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app_img_proc,app_img_proc_system,plt_img_proc}
+timestamp=[2025-09-07 16:56:44], mode=PLATFORM_GENERATION, duration=0:00:34.201, duration_ms=34201, data={name=plt_img_proc}
+timestamp=[2025-09-07 16:56:49], mode=BUILD, duration=0:00:01.032, duration_ms=1032, data={name=app_img_proc, configuration=Debug, clean_build=false}
+timestamp=[2025-09-07 16:57:00], mode=BUILD, duration=0:00:09.896, duration_ms=9896, data={name=app_img_proc_system, configuration=Debug, clean_build=false}
+timestamp=[2025-09-07 16:58:22], mode=BUILD, duration=0:00:00.662, duration_ms=662, data={name=app_img_proc, configuration=Debug, clean_build=false}
+timestamp=[2025-09-07 16:58:32], mode=BUILD, duration=0:00:08.380, duration_ms=8380, data={name=app_img_proc_system, configuration=Debug, clean_build=false}
+timestamp=[2025-09-07 16:59:26], mode=BUILD, duration=0:00:01.320, duration_ms=1320, data={name=app_img_proc, configuration=Debug, clean_build=false}
+timestamp=[2025-09-07 16:59:40], mode=BUILD, duration=0:00:12.737, duration_ms=12737, data={name=app_img_proc_system, configuration=Debug, clean_build=false}

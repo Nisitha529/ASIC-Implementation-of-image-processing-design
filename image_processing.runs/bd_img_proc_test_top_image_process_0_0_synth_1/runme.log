@@ -1,0 +1,304 @@
+
+*** Running vivado
+    with args -log bd_img_proc_test_top_image_process_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_img_proc_test_top_image_process_0_0.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bd_img_proc_test_top_image_process_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1365.301 ; gain = 98.836 ; free physical = 2729 ; free virtual = 4953
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+Command: synth_design -top bd_img_proc_test_top_image_process_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 139224
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2172.914 ; gain = 404.715 ; free physical = 163 ; free virtual = 1702
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_img_proc_test_top_image_process_0_0' [/media/nisitha/My_Passport/image_processing/image_processing.gen/sources_1/bd/bd_img_proc_test/ip/bd_img_proc_test_top_image_process_0_0/synth/bd_img_proc_test_top_image_process_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'top_image_process' [/media/nisitha/My_Passport/image_processing/image_processing.srcs/sources_1/new/top_image_process.v:1]
+INFO: [Synth 8-6157] synthesizing module 'image_control' [/media/nisitha/My_Passport/image_processing/image_processing.srcs/sources_1/new/image_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'linebuffer' [/media/nisitha/My_Passport/image_processing/image_processing.srcs/sources_1/new/linebuffer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'linebuffer' (0#1) [/media/nisitha/My_Passport/image_processing/image_processing.srcs/sources_1/new/linebuffer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'image_control' (0#1) [/media/nisitha/My_Passport/image_processing/image_processing.srcs/sources_1/new/image_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'convol' [/media/nisitha/My_Passport/image_processing/image_processing.srcs/sources_1/new/convol.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'convol' (0#1) [/media/nisitha/My_Passport/image_processing/image_processing.srcs/sources_1/new/convol.v:1]
+INFO: [Synth 8-6157] synthesizing module 'output_buffer' [/media/nisitha/My_Passport/image_processing/image_processing.runs/bd_img_proc_test_top_image_process_0_0_synth_1/.Xil/Vivado-139036-nisitha-laptop/realtime/output_buffer_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'output_buffer' (0#1) [/media/nisitha/My_Passport/image_processing/image_processing.runs/bd_img_proc_test_top_image_process_0_0_synth_1/.Xil/Vivado-139036-nisitha-laptop/realtime/output_buffer_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_image_process' (0#1) [/media/nisitha/My_Passport/image_processing/image_processing.srcs/sources_1/new/top_image_process.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bd_img_proc_test_top_image_process_0_0' (0#1) [/media/nisitha/My_Passport/image_processing/image_processing.gen/sources_1/bd/bd_img_proc_test/ip/bd_img_proc_test_top_image_process_0_0/synth/bd_img_proc_test_top_image_process_0_0.v:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2261.883 ; gain = 493.684 ; free physical = 195 ; free virtual = 1371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 2276.727 ; gain = 508.527 ; free physical = 167 ; free virtual = 1339
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 2276.727 ; gain = 508.527 ; free physical = 167 ; free virtual = 1339
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2276.727 ; gain = 0.000 ; free physical = 187 ; free virtual = 1294
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/media/nisitha/My_Passport/image_processing/image_processing.gen/sources_1/ip/output_buffer/output_buffer/output_buffer_in_context.xdc] for cell 'inst/output_buffer_01'
+Finished Parsing XDC File [/media/nisitha/My_Passport/image_processing/image_processing.gen/sources_1/ip/output_buffer/output_buffer/output_buffer_in_context.xdc] for cell 'inst/output_buffer_01'
+Parsing XDC File [/media/nisitha/My_Passport/image_processing/image_processing.gen/sources_1/bd/bd_img_proc_test/ip/bd_img_proc_test_top_image_process_0_0/bd_img_proc_test_top_image_process_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/media/nisitha/My_Passport/image_processing/image_processing.gen/sources_1/bd/bd_img_proc_test/ip/bd_img_proc_test_top_image_process_0_0/bd_img_proc_test_top_image_process_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/media/nisitha/My_Passport/image_processing/image_processing.runs/bd_img_proc_test_top_image_process_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/media/nisitha/My_Passport/image_processing/image_processing.runs/bd_img_proc_test_top_image_process_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2421.477 ; gain = 0.000 ; free physical = 180 ; free virtual = 1274
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:02 . Memory (MB): peak = 2421.512 ; gain = 0.000 ; free physical = 174 ; free virtual = 1277
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:01:17 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 178 ; free virtual = 1264
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:01:17 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 178 ; free virtual = 1265
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /media/nisitha/My_Passport/image_processing/image_processing.runs/bd_img_proc_test_top_image_process_0_0_synth_1/dont_touch.xdc, line 12).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/output_buffer_01. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:01:18 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 177 ; free virtual = 1268
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:01:21 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 187 ; free virtual = 1269
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   9 Input   12 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 18    
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                8 Bit    Registers := 10    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input   72 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:01:30 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 189 ; free virtual = 1240
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-----------------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                                    | Inference | Size (Depth x Width) | Primitives   | 
++------------+-----------------------------------------------+-----------+----------------------+--------------+
+|inst        | image_control_01/lineBuffer_02/linebuffer_reg | Implied   | 512 x 8              | RAM64M x 72  | 
+|inst        | image_control_01/lineBuffer_01/linebuffer_reg | Implied   | 512 x 8              | RAM64M x 72  | 
+|inst        | image_control_01/lineBuffer_00/linebuffer_reg | Implied   | 512 x 8              | RAM64M x 72  | 
+|inst        | image_control_01/lineBuffer_03/linebuffer_reg | Implied   | 512 x 8              | RAM64M x 72  | 
++------------+-----------------------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:39 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 189 ; free virtual = 1160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:01:40 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 182 ; free virtual = 1140
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+-----------------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                                    | Inference | Size (Depth x Width) | Primitives   | 
++------------+-----------------------------------------------+-----------+----------------------+--------------+
+|inst        | image_control_01/lineBuffer_02/linebuffer_reg | Implied   | 512 x 8              | RAM64M x 72  | 
+|inst        | image_control_01/lineBuffer_01/linebuffer_reg | Implied   | 512 x 8              | RAM64M x 72  | 
+|inst        | image_control_01/lineBuffer_00/linebuffer_reg | Implied   | 512 x 8              | RAM64M x 72  | 
+|inst        | image_control_01/lineBuffer_03/linebuffer_reg | Implied   | 512 x 8              | RAM64M x 72  | 
++------------+-----------------------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:42 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 182 ; free virtual = 1133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:49 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 187 ; free virtual = 1135
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:49 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 187 ; free virtual = 1135
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:50 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 185 ; free virtual = 1136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:50 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 185 ; free virtual = 1136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:50 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 185 ; free virtual = 1136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:50 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 185 ; free virtual = 1136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------+--------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name       | RTL Name                             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------+--------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_image_process | convol_01/o_convolved_data_valid_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------------+--------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |output_buffer |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |output_buffer |     1|
+|2     |CARRY4        |    15|
+|3     |LUT1          |    16|
+|4     |LUT2          |    25|
+|5     |LUT3          |    96|
+|6     |LUT4          |    60|
+|7     |LUT5          |    35|
+|8     |LUT6          |   338|
+|9     |MUXF7         |    96|
+|10    |RAM64M        |   288|
+|11    |SRL16E        |     1|
+|12    |FDRE          |   210|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:50 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 184 ; free virtual = 1136
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:18 . Memory (MB): peak = 2421.512 ; gain = 508.527 ; free physical = 184 ; free virtual = 1137
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:50 . Memory (MB): peak = 2421.512 ; gain = 653.312 ; free physical = 184 ; free virtual = 1137
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2421.512 ; gain = 0.000 ; free physical = 183 ; free virtual = 1139
+INFO: [Netlist 29-17] Analyzing 399 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2421.512 ; gain = 0.000 ; free physical = 196 ; free virtual = 1134
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 288 instances were transformed.
+  RAM64M => RAM64M (RAMD64E(x4)): 288 instances
+
+Synth Design complete | Checksum: 61f1121
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:03:06 . Memory (MB): peak = 2421.512 ; gain = 978.555 ; free physical = 186 ; free virtual = 1130
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1687.108; main = 1399.344; forked = 323.674
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3422.082; main = 2421.480; forked = 1000.602
+INFO: [Coretcl 2-1174] Renamed 8 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.79 . Memory (MB): peak = 2445.488 ; gain = 0.000 ; free physical = 997 ; free virtual = 1970
+report_design_analysis: Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:14 . Memory (MB): peak = 2445.488 ; gain = 0.000 ; free physical = 779 ; free virtual = 1928
+INFO: [Common 17-1381] The checkpoint '/media/nisitha/My_Passport/image_processing/image_processing.runs/bd_img_proc_test_top_image_process_0_0_synth_1/bd_img_proc_test_top_image_process_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 2445.488 ; gain = 23.977 ; free physical = 772 ; free virtual = 1938
+INFO: [runtcl-4] Executing : report_utilization -file bd_img_proc_test_top_image_process_0_0_utilization_synth.rpt -pb bd_img_proc_test_top_image_process_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  7 15:33:56 2025...

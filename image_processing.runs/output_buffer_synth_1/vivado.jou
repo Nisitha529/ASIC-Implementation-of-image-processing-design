@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Sep  7 12:34:21 2025
+# Process ID: 118112
+# Current directory: /media/nisitha/My_Passport/image_processing/image_processing.runs/output_buffer_synth_1
+# Command line: vivado -log output_buffer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source output_buffer.tcl
+# Log file: /media/nisitha/My_Passport/image_processing/image_processing.runs/output_buffer_synth_1/output_buffer.vds
+# Journal file: /media/nisitha/My_Passport/image_processing/image_processing.runs/output_buffer_synth_1/vivado.jou
+# Running On: nisitha-laptop, OS: Linux, CPU Frequency: 1799.977 MHz, CPU Physical cores: 4, Host memory: 16471 MB
+#-----------------------------------------------------------
+source output_buffer.tcl -notrace

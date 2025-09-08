@@ -1,0 +1,26 @@
+
+70. Printing statistics.
+
+=== fpga_sobel_top ===
+
+   Number of wires:               1688
+   Number of wire bits:           1879
+   Number of public wires:          23
+   Number of public wire bits:     137
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1823
+     $_ANDNOT_                     313
+     $_AND_                         24
+     $_MUX_                        175
+     $_NAND_                        35
+     $_NOR_                         37
+     $_NOT_                          8
+     $_ORNOT_                       34
+     $_OR_                        1040
+     $_XNOR_                         9
+     $_XOR_                         42
+     sky130_fd_sc_hd__dfxtp_2      105
+     sky130_fd_sc_hd__ebufn_2        1
+

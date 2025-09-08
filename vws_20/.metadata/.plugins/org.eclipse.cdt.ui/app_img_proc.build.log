@@ -1,0 +1,25 @@
+16:59:25 **** Incremental Build of configuration Debug for project app_img_proc ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/imageIpTest.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/imageIpTest.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/media/nisitha/My_Passport/image_processing/vws_20/plt_img_proc/export/plt_img_proc/sw/plt_img_proc/standalone_domain/bspinclude/include -MMD -MP -MF"src/imageIpTest.d" -MT"src/imageIpTest.o" -o "src/imageIpTest.o" "../src/imageIpTest.c"
+Finished building: ../src/imageIpTest.c
+ 
+Building target: app_img_proc.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/media/nisitha/My_Passport/image_processing/vws_20/plt_img_proc/export/plt_img_proc/sw/plt_img_proc/standalone_domain/bsplib/lib -o "app_img_proc.elf" ./src/imageIpTest.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: app_img_proc.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size app_img_proc.elf  |tee "app_img_proc.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39200	   3104	  22664	  64968	   fdc8	app_img_proc.elf
+Finished building: app_img_proc.elf.size
+ 
+
+16:59:26 Build Finished (took 1s.296ms)
+

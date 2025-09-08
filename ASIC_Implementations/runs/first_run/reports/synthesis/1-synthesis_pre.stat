@@ -1,0 +1,32 @@
+
+64. Printing statistics.
+
+=== fpga_sobel_top ===
+
+   Number of wires:               1528
+   Number of wire bits:           1719
+   Number of public wires:          23
+   Number of public wire bits:     137
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1666
+     $_ANDNOT_                     313
+     $_AND_                         24
+     $_DFFE_PP_                     16
+     $_DFF_P_                        3
+     $_MUX_                         19
+     $_NAND_                        35
+     $_NOR_                         37
+     $_NOT_                          7
+     $_ORNOT_                       34
+     $_OR_                        1040
+     $_SDFFE_PN1P_                   1
+     $_SDFFE_PP0P_                  23
+     $_SDFFE_PP1N_                   3
+     $_SDFFE_PP1P_                  27
+     $_SDFF_PP0_                    32
+     $_TBUF_                         1
+     $_XNOR_                         9
+     $_XOR_                         42
+

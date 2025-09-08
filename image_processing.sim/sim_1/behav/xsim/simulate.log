@@ -1,0 +1,18 @@
+Time resolution is 1 ps
+Opened succesfully!
+
+WARNING: Insufficient data from the input file for $fread
+bmp_size =      818058!
+
+bmp_start_pos =         138!
+
+bmp_width =         640!
+
+bmp_height =         426!
+
+biBitCount =          24!
+
+writeBMP: done!
+
+$stop called at time : 2726590 ns : File "/media/nisitha/My_Passport/image_processing/image_processing.srcs/sim_1/new/tb_sobel_mod.v" Line 196
+INFO: xsimkernel Simulation Memory Usage: 122280 KB (Peak: 166944 KB), Simulation CPU Usage: 208620 ms

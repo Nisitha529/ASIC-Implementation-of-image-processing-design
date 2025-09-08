@@ -1,0 +1,21 @@
+
+77. Executing CHECK pass (checking for obvious problems).
+Checking module fpga_sobel_top...
+Warning: Wire fpga_sobel_top.\xvclk_o is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_yvalid is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_xvalid is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_red [3] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_red [2] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_red [1] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_red [0] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_green [3] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_green [2] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_green [1] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_green [0] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_blue [3] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_blue [2] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_blue [1] is used but has no driver.
+Warning: Wire fpga_sobel_top.\vga_blue [0] is used but has no driver.
+Warning: Wire fpga_sobel_top.\sio_c_o is used but has no driver.
+Warning: Wire fpga_sobel_top.\cam_rst_o is used but has no driver.
+Found and reported 17 problems.
