@@ -1,9 +1,3 @@
-/*
- * imageIpTest.c
- *
- *  Created on: Apr 4, 2020
- *      Author: VIPIN
- */
 
 #include "xaxidma.h"
 #include "xparameters.h"
