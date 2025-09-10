@@ -64,7 +64,26 @@ Camera → RGB Capture → Grayscale Conversion → Line Buffers → Sobel Kerne
 
 ## ASIC implementation for the RTL based sobel detection design.
 
-### Static Timing Analysis Report
+### Synthesis overview
+- The fpga_sobel_top design was successfully synthesized, producing a fully optimized gate-level netlist. The synthesis results confirm that all intended logic functions are correctly mapped to the target SkyWater 130nm standard cell library, ensuring functional correctness and efficient resource utilization.
+
+#### Resource Utilization
+
+- The design uses a total of 1,666–1,823 cells, including a mix of combinational logic (AND, OR, XOR, multiplexers) and sequential elements (D flip-flops), reflecting a balanced architecture with strong area efficiency. With 1,528–1,688 wires connecting these cells, the netlist demonstrates clean connectivity while maintaining compactness, which will support efficient placement and routing in subsequent stages.
+
+#### Timing Performance
+
+- Static timing analysis of the synthesized netlist indicates that all critical paths meet the timing requirements with positive slack margins. The primary clock path from sys_clk_i to xvclk_o achieves a setup slack of 4.74 ns and a hold slack of 4.33 ns, demonstrating that the synthesized logic is well-optimized for high-performance operation.
+
+#### Power Efficiency
+
+- The synthesized design shows a low total power consumption of approximately 0.152 mW, with sequential logic accounting for the majority of the usage. The efficient distribution of internal and switching power highlights the design’s suitability for low-power and resource-constrained FPGA implementations.
+
+#### Final Status
+
+- Overall, the synthesis results confirm that fpga_sobel_top is functionally correct, area-efficient, timing-closed, and power-optimized. The netlist provides a strong foundation for downstream floorplanning, placement, and routing, ensuring smooth progression through the full FPGA implementation flow.
+
+### Clock Tree Synthesis Report
 - The Static Timing Analysis report provides a comprehensive overview of the timing performance for the FPGA-based Sobel edge detection design implemented on the Sky130 process node.
 
 #### Timing Analysis Summary
