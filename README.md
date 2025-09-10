@@ -64,4 +64,45 @@ The tb_sobel_mod.v module would operate the sobel operation on the provided imag
 
 ## ZYNQ PS based verification approach for the sobel RTL implementation
 
+### Key features
+- AXI-Stream Interfaces: Fully compliant input/output interfaces for easy integration with ZYNQ PS
+- Real-time Processing: Hardware-accelerated Sobel edge detection pipeline
+- Efficient Memory Management: Four-line buffer system for 3×3 convolution operations
+- Configurable Kernel Support: Flexible convolution kernel implementation
+- Interrupt-Driven Architecture: Efficient communication with processing system
+- Resource-Optimized Design: Minimal resource utilization for ASIC migration
+
+### Block Diagram
+<img width="1821" height="454" alt="bd_img_proc" src="https://github.com/user-attachments/assets/b9b56a8c-0ad1-4dd5-bb80-49b73d7d1769" />
+
+### Module Descriptions
+
+#### Top-Level Module (top_image_process.v)
+Integrates all processing elements and provides AXI-stream compatible interfaces for PS communication. Manages data flow and interrupt generation.
+
+#### Image Control (image_control.v)
+Coordinates the line buffer system, manages pixel storage across four line buffers, and generates the 3×3 pixel windows needed for convolution operations. Implements intelligent buffer switching and read/write pointer management.
+
+#### Line Buffer (linebuffer.v)
+Implements a single line buffer with configurable width (512 pixels). Provides efficient storage and retrieval of image scanlines with separate read/write pointers.
+
+#### Convolution Engine (convol.v)
+Performs the Sobel operator calculation using a configurable 3×3 kernel. Supports flexible kernel coefficients and implements efficient multiply-accumulate operations.
+
+#### Output Buffer (FIFO)
+Xilinx FIFO IP configured for AXI-stream compatibility, providing clock domain isolation and data rate matching between processing logic and output interface.
+
+### ZYNQ Integration
+
+#### PS-PL Interface
+- AXI-Stream Input: Receives pixel data from PS via DMA
+- AXI-Stream Output: Delivers processed data to PS via DMA
+- Interrupt Signaling: alerts PS when processed data is available
+
+### Vitis workspace
+
+
+
+
+
 ## ASIC implementation for the RTL based sobel detection design.
