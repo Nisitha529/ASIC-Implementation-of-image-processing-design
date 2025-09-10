@@ -3,9 +3,9 @@
 This project implements a complete hardware implementation for real-time image edge detection using the Sobel operator on an FPGA. The system captures video from a camera (OV7670 compatible), processes each frame through a grayscale conversion and Sobel edge detection pipeline, and outputs the results to a VGA display. The design is optimized for real-time performance at 640x480 resolution (VGA) with a modular and pipelined architecture. Due to the unavailability of the camera module, this edge detection mechanism was verified in an ZYNQ PS environment. After that the an ASIC implementation was done to the whole fpga based sobel detection system. So this project will discuss the whole design flow in three steps.
 
 1. Designing of RTL based sobel edge detection system.
-2. ZYNQ PS based verification approach for the sobel RTL implementation.
-3. ASIC implementation for the RTL based sobel detection design.
-
+2. ASIC implementation for the RTL based sobel detection design.
+3. ZYNQ PS based verification approach for the sobel RTL implementation.
+   
 ## Designing of RTL based sobel edge detection system
 
 ### Key Features
@@ -56,11 +56,43 @@ Camera → RGB Capture → Grayscale Conversion → Line Buffers → Sobel Kerne
 ### Verification 
 - The tb_sobel_mod.v module would operate the sobel operation on the provided image and generate the resulting image.
 
-#### Input image.
+#### Input image
 <img width="2048" height="1282" alt="Input image" src="https://github.com/user-attachments/files/22249161/sample_2.bmp" />
 
-#### Resulting image.
+#### Resulting image
 <img width="2048" height="1282" alt="Resulting image" src="https://github.com/user-attachments/files/22249178/result7.bmp" />
+
+## ASIC implementation for the RTL based sobel detection design.
+
+### Static Timing Analysis Report
+- The Static Timing Analysis report provides a comprehensive overview of the timing performance for the FPGA-based Sobel edge detection design implemented on the Sky130 process node.
+
+#### Timing Analysis Summary
+- The design successfully meets timing requirements with no setup or hold violations reported across the analyzed paths. All maximum delay checks pass with comfortable positive slack, confirming that critical paths are well within the defined timing budget.
+
+#### Clock and IO Performance
+- The primary system clock (sys_clk_i) and associated IO paths, including outputs such as xvclk_o, demonstrate strong timing margins. For example, the path from the input system clock to xvclk_o achieves a positive slack of over 4.7 ns, indicating stable and reliable clock distribution and output response.
+
+#### Signal Integrity
+- Static timing checks confirm that the majority of signal transitions remain well within defined slew, capacitance, and fanout limits. This ensures robust electrical characteristics and consistent behavior across process, voltage, and temperature variations.
+
+#### Parasitic Extraction
+- The flow includes parasitic annotation to model real interconnect delays. Annotated timing analysis confirms that the design is not only logically correct but also physically aware, reinforcing confidence in post-layout implementation quality.
+
+#### Final Status
+- Overall, the design demonstrates clean STA results with strong positive slack margins, no timing violations, and reliable IO performance. 
+
+### Floorplanning Analysis Report
+- The floorplanning stage was successfully completed, resulting in a compact and well-structured layout. The design achieves an efficient balance between core utilization and die allocation, ensuring smooth progression toward placement and routing.
+
+#### Core Area
+The synthesized core area is reported with coordinates spanning approximately 2,192 µm², demonstrating effective packing of standard cells and logic blocks. This compact core layout highlights the efficiency of the design while leaving sufficient margin for routing and clock distribution.
+
+#### Die Area
+The die outline extends slightly beyond the core, with a total footprint of about 2,198 µm × 2,208 µm. This provides an optimized boundary that accommodates IO pads, power distribution networks, and routing resources without unnecessary overhead, ensuring a reliable physical implementation.
+
+#### Final Status
+With a clean and efficient floorplan in place, the design is well-prepared for subsequent implementation steps. The strong alignment between the core and die dimensions confirms that the project is both area-efficient and layout-ready.
 
 
 ## ZYNQ PS based verification approach for the sobel RTL implementation
@@ -116,4 +148,11 @@ Xilinx FIFO IP configured for AXI-stream compatibility, providing clock domain i
 - Image Processing ISR: Handles interrupts from the custom image processing IP
 - DMA Receive ISR: Processes completion interrupts from DMA receive operations
 
-## ASIC implementation for the RTL based sobel detection design.
+### Original Image
+<img width="1821" height="454" alt="Original Lana" src="https://github.com/user-attachments/files/22251881/lena_gray.bmp" />
+
+### Resulting Image
+<img width="1821" height="454" alt="Blurred Lana" src="https://github.com/user-attachments/files/22251893/lena_gray_blurred.bmp" />
+
+
+
