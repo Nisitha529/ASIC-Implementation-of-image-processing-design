@@ -19,41 +19,42 @@ This project implements a complete hardware implementation for real-time image e
 ### Hardware Architecture
 The following system follows a pipelined processing flow.
 The video feed from the camera module will be go through the Grayscale conversion. Then those data would be fed into line buffers. Sobel kernel implementation would operate on the image data and then would push the computed data out. Then the edge magnitude calculation will be carried out. The processed data would be arranged for the VGA display.
+
 Camera → RGB Capture → Grayscale Conversion → Line Buffers → Sobel Kernel → Edge Magnitude Calculation → VGA Display
 
 ### Module Descriptions
 #### Caemera interface  (cam_mod.v)
-Top-level camera module that integrates camera initialization, data capture, and basic processing. Coordinates the SCCB configuration and video data pipeline.
+- Top-level camera module that integrates camera initialization, data capture, and basic processing. Coordinates the SCCB configuration and video data pipeline.
 
 #### Camera Initialization (camera_init.v)
-Manages camera power-up, reset, and register configuration through SCCB interface. Contains the initialization sequence for OV7670 camera.
+- Manages camera power-up, reset, and register configuration through SCCB interface. Contains the initialization sequence for OV7670 camera.
 
 #### SCCB Communication (sccb_sender.v)
-Implements the Serial Camera Control Bus (SCCB) protocol for camera register configuration. Handles timing and data transmission to the camera.
+- Implements the Serial Camera Control Bus (SCCB) protocol for camera register configuration. Handles timing and data transmission to the camera.
 
 #### Register Initialization (reg_init.v)
-Stores the complete set of camera register values required for proper OV7670 operation. Contains over 175 register settings for resolution, color format, and exposure.
+- Stores the complete set of camera register values required for proper OV7670 operation. Contains over 175 register settings for resolution, color format, and exposure.
 
 #### Camera Data Processing (cam_data_proc.v)
-Provides various image processing operations including grayscale conversion, black and white thresholding, negative image, and color enhancement.
+- Provides various image processing operations including grayscale conversion, black and white thresholding, negative image, and color enhancement.
 
 #### Sobel Processing (sobel_mod.v)
-Top-level Sobel processing module that coordinates grayscale conversion, edge detection, and output conversion.
+- Top-level Sobel processing module that coordinates grayscale conversion, edge detection, and output conversion.
 
 #### Data Buffering System (sobel_data_buffer.v)
-Manages the line buffers needed for 3x3 Sobel operation. Includes double and single line FIFOs to store previous scanlines.
+- Manages the line buffers needed for 3x3 Sobel operation. Includes double and single line FIFOs to store previous scanlines.
 
 #### 3x3 Window Formation (sobel_data_modulate.v)
-Forms the 3x3 pixel window needed for Sobel convolution. Handles edge cases with zero padding.
+- Forms the 3x3 pixel window needed for Sobel convolution. Handles edge cases with zero padding.
 
 #### Sobel Calculator (sobel_calc.v)
-Computes the Sobel operator using separate horizontal and vertical convolutions, then combines results to produce edge magnitude.
+- Computes the Sobel operator using separate horizontal and vertical convolutions, then combines results to produce edge magnitude.
 
 #### VGA Display (vga_display.v)
-Controls VGA output timing and generates appropriate signals for displaying processed video.
+- Controls VGA output timing and generates appropriate signals for displaying processed video.
 
 ### Verification 
-The tb_sobel_mod.v module would operate the sobel operation on the provided image and generate the resulting image.
+- The tb_sobel_mod.v module would operate the sobel operation on the provided image and generate the resulting image.
 
 #### Input image.
 <img width="2048" height="1282" alt="Input image" src="https://github.com/user-attachments/files/22249161/sample_2.bmp" />
@@ -101,8 +102,18 @@ Xilinx FIFO IP configured for AXI-stream compatibility, providing clock domain i
 
 ### Vitis workspace
 
+#### Main initialization
+ - UART Configuration: Sets up serial communication for debugging and data output
+ - DMA Controller Setup: Configures AXI DMA for data transfer between PS and PL
+ - Interrupt Controller: Initializes the Generic Interrupt Controller (GIC) for handling hardware interrupts
 
+#### DMA Transfer Setup
+ - Simple Transfer Mode: Configures DMA for straightforward memory-to-device and device-to-memory transfers
+ - Interrupt Enable: Sets up DMA to generate interrupts on completion of transfers
+ - Dual Transfer Initiation: Starts both receive (device-to-memory) and transmit (memory-to-device) operations
 
-
+#### Interrupt Service Routine 
+- Image Processing ISR: Handles interrupts from the custom image processing IP
+- DMA Receive ISR: Processes completion interrupts from DMA receive operations
 
 ## ASIC implementation for the RTL based sobel detection design.
