@@ -55,11 +55,11 @@ Controls VGA output timing and generates appropriate signals for displaying proc
 ### Verification 
 The tb_sobel_mod.v module would operate the sobel operation on the provided image and generate the resulting image.
 
-####Input image.
-[sample_2.bmp](https://github.com/user-attachments/files/22249161/sample_2.bmp)
+#### Input image.
+<img width="2048" height="1282" alt="Input image" src="https://github.com/user-attachments/files/22249161/sample_2.bmp" />
 
-####Resulting image.
-[result7.bmp](https://github.com/user-attachments/files/22249178/result7.bmp)
+#### Resulting image.
+<img width="2048" height="1282" alt="Resulting image" src="https://github.com/user-attachments/files/22249178/result7.bmp" />
 
 
 ## ZYNQ PS based verification approach for the sobel RTL implementation
