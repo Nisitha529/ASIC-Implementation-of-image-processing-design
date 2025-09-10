@@ -83,6 +83,18 @@ Camera → RGB Capture → Grayscale Conversion → Line Buffers → Sobel Kerne
 
 - Overall, the synthesis results confirm that fpga_sobel_top is functionally correct, area-efficient, timing-closed, and power-optimized. The netlist provides a strong foundation for downstream floorplanning, placement, and routing, ensuring smooth progression through the full FPGA implementation flow.
 
+### Floorplanning Analysis Report
+- The floorplanning stage was successfully completed, resulting in a compact and well-structured layout. The design achieves an efficient balance between core utilization and die allocation, ensuring smooth progression toward placement and routing.
+
+#### Core Area
+- The synthesized core area is reported with coordinates spanning approximately 2,192 µm², demonstrating effective packing of standard cells and logic blocks. This compact core layout highlights the efficiency of the design while leaving sufficient margin for routing and clock distribution.
+
+#### Die Area
+- The die outline extends slightly beyond the core, with a total footprint of about 2,198 µm × 2,208 µm. This provides an optimized boundary that accommodates IO pads, power distribution networks, and routing resources without unnecessary overhead, ensuring a reliable physical implementation.
+
+#### Final Status
+- With a clean and efficient floorplan in place, the design is well-prepared for subsequent implementation steps. The strong alignment between the core and die dimensions confirms that the project is both area-efficient and layout-ready.
+
 ### Clock Tree Synthesis Report
 - The Static Timing Analysis report provides a comprehensive overview of the timing performance for the FPGA-based Sobel edge detection design implemented on the Sky130 process node.
 
@@ -100,18 +112,6 @@ Camera → RGB Capture → Grayscale Conversion → Line Buffers → Sobel Kerne
 
 #### Final Status
 - Overall, the design demonstrates clean STA results with strong positive slack margins, no timing violations, and reliable IO performance. 
-
-### Floorplanning Analysis Report
-- The floorplanning stage was successfully completed, resulting in a compact and well-structured layout. The design achieves an efficient balance between core utilization and die allocation, ensuring smooth progression toward placement and routing.
-
-#### Core Area
-- The synthesized core area is reported with coordinates spanning approximately 2,192 µm², demonstrating effective packing of standard cells and logic blocks. This compact core layout highlights the efficiency of the design while leaving sufficient margin for routing and clock distribution.
-
-#### Die Area
-- The die outline extends slightly beyond the core, with a total footprint of about 2,198 µm × 2,208 µm. This provides an optimized boundary that accommodates IO pads, power distribution networks, and routing resources without unnecessary overhead, ensuring a reliable physical implementation.
-
-#### Final Status
-- With a clean and efficient floorplan in place, the design is well-prepared for subsequent implementation steps. The strong alignment between the core and die dimensions confirms that the project is both area-efficient and layout-ready.
 
 ### Placement Analysis Report
 - The placement stage was successfully completed with clean timing and power results. The design demonstrates strong stability across both setup and hold analysis, with all paths meeting their requirements and no violations observed. This confirms that the placed netlist is robust and ready for subsequent optimization and routing.
