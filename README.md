@@ -63,6 +63,8 @@ Camera → RGB Capture → Grayscale Conversion → Line Buffers → Sobel Kerne
 <img width="2048" height="1282" alt="Resulting image" src="https://github.com/user-attachments/files/22249178/result7.bmp" />
 
 ## ASIC implementation for the RTL based sobel detection design.
+<img width="780" height="785" alt="GDS Layout" src="https://github.com/user-attachments/assets/f21d98a3-ff72-41d1-a3a8-ee74c6a8e8b8" />
+
 
 ### Synthesis overview
 - The fpga_sobel_top design was successfully synthesized, producing a fully optimized gate-level netlist. The synthesis results confirm that all intended logic functions are correctly mapped to the target SkyWater 130nm standard cell library, ensuring functional correctness and efficient resource utilization.
