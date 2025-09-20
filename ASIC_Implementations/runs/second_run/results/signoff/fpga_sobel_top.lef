@@ -1,0 +1,399 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO fpga_sobel_top
+  CLASS BLOCK ;
+  FOREIGN fpga_sobel_top ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 165.660 BY 176.380 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 27.340 10.640 28.940 163.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 65.980 10.640 67.580 163.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 104.620 10.640 106.220 163.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 143.260 10.640 144.860 163.440 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 32.420 160.320 34.020 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 70.500 160.320 72.100 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 108.580 160.320 110.180 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 146.660 160.320 148.260 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 24.040 10.640 25.640 163.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 62.680 10.640 64.280 163.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 101.320 10.640 102.920 163.440 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 139.960 10.640 141.560 163.440 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 29.120 160.320 30.720 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 67.200 160.320 68.800 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 105.280 160.320 106.880 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 143.360 160.320 144.960 ;
+    END
+  END VPWR
+  PIN cam_data_i[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 161.660 119.040 165.660 119.640 ;
+    END
+  END cam_data_i[0]
+  PIN cam_data_i[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 83.810 0.000 84.090 4.000 ;
+    END
+  END cam_data_i[1]
+  PIN cam_data_i[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 136.040 4.000 136.640 ;
+    END
+  END cam_data_i[2]
+  PIN cam_data_i[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 161.660 95.240 165.660 95.840 ;
+    END
+  END cam_data_i[3]
+  PIN cam_data_i[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 112.790 172.380 113.070 176.380 ;
+    END
+  END cam_data_i[4]
+  PIN cam_data_i[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 128.890 0.000 129.170 4.000 ;
+    END
+  END cam_data_i[5]
+  PIN cam_data_i[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 20.440 4.000 21.040 ;
+    END
+  END cam_data_i[6]
+  PIN cam_data_i[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 161.660 163.240 165.660 163.840 ;
+    END
+  END cam_data_i[7]
+  PIN cam_rst_o
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 132.110 172.380 132.390 176.380 ;
+    END
+  END cam_rst_o
+  PIN href_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 161.660 51.040 165.660 51.640 ;
+    END
+  END href_i
+  PIN pclk_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END pclk_i
+  PIN sio_c_o
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 148.210 0.000 148.490 4.000 ;
+    END
+  END sio_c_o
+  PIN sio_d_io
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.782000 ;
+    PORT
+      LAYER met2 ;
+        RECT 154.650 172.380 154.930 176.380 ;
+    END
+  END sio_d_io
+  PIN sys_clk_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
+    PORT
+      LAYER met2 ;
+        RECT 41.950 0.000 42.230 4.000 ;
+    END
+  END sys_clk_i
+  PIN sys_rst_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
+    PORT
+      LAYER met2 ;
+        RECT 48.390 172.380 48.670 176.380 ;
+    END
+  END sys_rst_i
+  PIN vga_blue[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 68.040 4.000 68.640 ;
+    END
+  END vga_blue[0]
+  PIN vga_blue[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 44.240 4.000 44.840 ;
+    END
+  END vga_blue[1]
+  PIN vga_blue[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 161.660 3.440 165.660 4.040 ;
+    END
+  END vga_blue[2]
+  PIN vga_blue[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 112.240 4.000 112.840 ;
+    END
+  END vga_blue[3]
+  PIN vga_green[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 19.410 0.000 19.690 4.000 ;
+    END
+  END vga_green[0]
+  PIN vga_green[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 25.850 172.380 26.130 176.380 ;
+    END
+  END vga_green[1]
+  PIN vga_green[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 161.660 27.240 165.660 27.840 ;
+    END
+  END vga_green[2]
+  PIN vga_green[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 64.490 0.000 64.770 4.000 ;
+    END
+  END vga_green[3]
+  PIN vga_red[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 156.440 4.000 157.040 ;
+    END
+  END vga_red[0]
+  PIN vga_red[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 161.660 139.440 165.660 140.040 ;
+    END
+  END vga_red[1]
+  PIN vga_red[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 67.710 172.380 67.990 176.380 ;
+    END
+  END vga_red[2]
+  PIN vga_red[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 90.250 172.380 90.530 176.380 ;
+    END
+  END vga_red[3]
+  PIN vga_xvalid
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 106.350 0.000 106.630 4.000 ;
+    END
+  END vga_xvalid
+  PIN vga_yvalid
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 88.440 4.000 89.040 ;
+    END
+  END vga_yvalid
+  PIN vsync_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 3.310 172.380 3.590 176.380 ;
+    END
+  END vsync_i
+  PIN xvclk_o
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met3 ;
+        RECT 161.660 71.440 165.660 72.040 ;
+    END
+  END xvclk_o
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 160.080 163.285 ;
+      LAYER met1 ;
+        RECT 4.670 10.640 160.470 163.440 ;
+      LAYER met2 ;
+        RECT 4.690 172.100 25.570 173.130 ;
+        RECT 26.410 172.100 48.110 173.130 ;
+        RECT 48.950 172.100 67.430 173.130 ;
+        RECT 68.270 172.100 89.970 173.130 ;
+        RECT 90.810 172.100 112.510 173.130 ;
+        RECT 113.350 172.100 131.830 173.130 ;
+        RECT 132.670 172.100 154.370 173.130 ;
+        RECT 155.210 172.100 160.450 173.130 ;
+        RECT 4.690 4.280 160.450 172.100 ;
+        RECT 4.690 3.555 19.130 4.280 ;
+        RECT 19.970 3.555 41.670 4.280 ;
+        RECT 42.510 3.555 64.210 4.280 ;
+        RECT 65.050 3.555 83.530 4.280 ;
+        RECT 84.370 3.555 106.070 4.280 ;
+        RECT 106.910 3.555 128.610 4.280 ;
+        RECT 129.450 3.555 147.930 4.280 ;
+        RECT 148.770 3.555 160.450 4.280 ;
+      LAYER met3 ;
+        RECT 3.990 162.840 161.260 163.365 ;
+        RECT 3.990 157.440 161.660 162.840 ;
+        RECT 4.400 156.040 161.660 157.440 ;
+        RECT 3.990 140.440 161.660 156.040 ;
+        RECT 3.990 139.040 161.260 140.440 ;
+        RECT 3.990 137.040 161.660 139.040 ;
+        RECT 4.400 135.640 161.660 137.040 ;
+        RECT 3.990 120.040 161.660 135.640 ;
+        RECT 3.990 118.640 161.260 120.040 ;
+        RECT 3.990 113.240 161.660 118.640 ;
+        RECT 4.400 111.840 161.660 113.240 ;
+        RECT 3.990 96.240 161.660 111.840 ;
+        RECT 3.990 94.840 161.260 96.240 ;
+        RECT 3.990 89.440 161.660 94.840 ;
+        RECT 4.400 88.040 161.660 89.440 ;
+        RECT 3.990 72.440 161.660 88.040 ;
+        RECT 3.990 71.040 161.260 72.440 ;
+        RECT 3.990 69.040 161.660 71.040 ;
+        RECT 4.400 67.640 161.660 69.040 ;
+        RECT 3.990 52.040 161.660 67.640 ;
+        RECT 3.990 50.640 161.260 52.040 ;
+        RECT 3.990 45.240 161.660 50.640 ;
+        RECT 4.400 43.840 161.660 45.240 ;
+        RECT 3.990 28.240 161.660 43.840 ;
+        RECT 3.990 26.840 161.260 28.240 ;
+        RECT 3.990 21.440 161.660 26.840 ;
+        RECT 4.400 20.040 161.660 21.440 ;
+        RECT 3.990 4.440 161.660 20.040 ;
+        RECT 3.990 3.575 161.260 4.440 ;
+      LAYER met4 ;
+        RECT 32.495 23.295 62.280 145.345 ;
+        RECT 64.680 23.295 65.580 145.345 ;
+        RECT 67.980 23.295 100.920 145.345 ;
+        RECT 103.320 23.295 104.220 145.345 ;
+        RECT 106.620 23.295 128.505 145.345 ;
+  END
+END fpga_sobel_top
+END LIBRARY
+

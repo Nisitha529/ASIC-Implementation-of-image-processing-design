@@ -1,0 +1,960 @@
+%Warning-EOFNEWLINE: /openlane/designs/image_proc/src/cam_data_proc.v:88:10: Missing newline at end of file (POSIX 3.206).
+                                                                           : ... Suggest add newline.
+   88 | endmodule
+      |          ^
+                     ... For warning description see https://verilator.org/warn/EOFNEWLINE?v=5.009
+                     ... Use "/* verilator lint_off EOFNEWLINE */" and lint_on around source to disable this message.
+%Warning-EOFNEWLINE: /openlane/designs/image_proc/src/cam_data_capt.v:41:10: Missing newline at end of file (POSIX 3.206).
+                                                                           : ... Suggest add newline.
+   41 | endmodule
+      |          ^
+%Warning-EOFNEWLINE: /openlane/designs/image_proc/src/reg_init.v:379:10: Missing newline at end of file (POSIX 3.206).
+                                                                       : ... Suggest add newline.
+  379 | endmodule
+      |          ^
+%Warning-EOFNEWLINE: /openlane/designs/image_proc/src/vga_display.v:46:10: Missing newline at end of file (POSIX 3.206).
+                                                                         : ... Suggest add newline.
+   46 | endmodule
+      |          ^
+%Warning-EOFNEWLINE: /openlane/designs/image_proc/src/vga_control.v:55:10: Missing newline at end of file (POSIX 3.206).
+                                                                         : ... Suggest add newline.
+   55 | endmodule
+      |          ^
+%Warning-EOFNEWLINE: /openlane/designs/image_proc/src/sobel_data_buffer.v:65:10: Missing newline at end of file (POSIX 3.206).
+                                                                               : ... Suggest add newline.
+   65 | endmodule
+      |          ^
+%Warning-EOFNEWLINE: /openlane/designs/image_proc/src/sccb_sender.v:87:10: Missing newline at end of file (POSIX 3.206).
+                                                                         : ... Suggest add newline.
+   87 | endmodule
+      |          ^
+%Warning-PINMISSING: /openlane/designs/image_proc/src/fpga_sobel_top.v:121:13: Cell has missing pin: 'ram_addr'
+  121 | vga_display vga_display_01 (
+      |             ^~~~~~~~~~~~~~
+%Warning-PINMISSING: /openlane/designs/image_proc/src/cam_mod.v:38:15: Cell has missing pin: 'wr_en'
+   38 | cam_data_capt cam_data_capt_01 (
+      |               ^~~~~~~~~~~~~~~~
+%Warning-PINMISSING: /openlane/designs/image_proc/src/cam_mod.v:38:15: Cell has missing pin: 'out_addr'
+   38 | cam_data_capt cam_data_capt_01 (
+      |               ^~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /openlane/designs/image_proc/src/cam_data_proc.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    1 | module cam_data_proc(
+      |        ^~~~~~~~~~~~~
+                       /openlane/designs/image_proc/src/fifo_double_line_buffer.v:23:8: ... Location of module with timescale
+   23 | module fifo_double_line_buffer(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+%Warning-IMPLICIT: /openlane/designs/image_proc/src/fpga_sobel_top.v:90:19: Signal definition not found, creating implicitly: 'cam_pwd_o'
+                                                                          : ... Suggested alternative: 'cam_red_o'
+   90 |   .cam_pwd_o     (cam_pwd_o),
+      |                   ^~~~~~~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sccb_sender.v:17:18: Operator ASSIGNDLY expects 21 bits on the Assign RHS, but Assign RHS's VARREF 'reg_ok' generates 1 bits.
+                                                                          : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.sender
+   17 |             count<=reg_ok; 
+      |                  ^~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sccb_sender.v:86:28: Operator COND expects 32 bits on the Conditional True, but Conditional True's SEL generates 1 bits.
+                                                                          : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.sender
+   86 |     assign sio_d=sio_d_send?data_temp[31]:'bz;
+      |                            ^
+%Warning-WIDTHTRUNC: /openlane/designs/image_proc/src/sccb_sender.v:86:17: Operator ASSIGNW expects 1 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                                         : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.sender
+   86 |     assign sio_d=sio_d_send?data_temp[31]:'bz;
+      |                 ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:59:19: Operator ADD expects 10 bits on the LHS, but LHS's VARREF 'd6_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   59 |     gx_p  <= d6_i + (d3_i << 1) + d0_i;
+      |                   ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:59:27: Operator SHIFTL expects 10 bits on the LHS, but LHS's VARREF 'd3_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   59 |     gx_p  <= d6_i + (d3_i << 1) + d0_i;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:59:33: Operator ADD expects 10 bits on the RHS, but RHS's VARREF 'd0_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   59 |     gx_p  <= d6_i + (d3_i << 1) + d0_i;
+      |                                 ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:60:19: Operator ADD expects 10 bits on the LHS, but LHS's VARREF 'd8_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   60 |     gx_n  <= d8_i + (d5_i << 1) + d2_i;
+      |                   ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:60:27: Operator SHIFTL expects 10 bits on the LHS, but LHS's VARREF 'd5_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   60 |     gx_n  <= d8_i + (d5_i << 1) + d2_i;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:60:33: Operator ADD expects 10 bits on the RHS, but RHS's VARREF 'd2_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   60 |     gx_n  <= d8_i + (d5_i << 1) + d2_i;
+      |                                 ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:69:19: Operator ADD expects 10 bits on the LHS, but LHS's VARREF 'd0_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   69 |     gy_p  <= d0_i + (d1_i << 1) + d2_i;
+      |                   ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:69:27: Operator SHIFTL expects 10 bits on the LHS, but LHS's VARREF 'd1_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   69 |     gy_p  <= d0_i + (d1_i << 1) + d2_i;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:69:33: Operator ADD expects 10 bits on the RHS, but RHS's VARREF 'd2_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   69 |     gy_p  <= d0_i + (d1_i << 1) + d2_i;
+      |                                 ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:70:19: Operator ADD expects 10 bits on the LHS, but LHS's VARREF 'd6_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   70 |     gy_n  <= d6_i + (d7_i << 1) + d8_i;
+      |                   ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:70:27: Operator SHIFTL expects 10 bits on the LHS, but LHS's VARREF 'd7_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   70 |     gy_n  <= d6_i + (d7_i << 1) + d8_i;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:70:33: Operator ADD expects 10 bits on the RHS, but RHS's VARREF 'd8_i' generates 8 bits.
+                                                                         : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   70 |     gy_n  <= d6_i + (d7_i << 1) + d8_i;
+      |                                 ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/sobel_calc.v:102:27: Operator GTE expects 10 bits on the RHS, but RHS's CONST '8'h3c' generates 8 bits.
+                                                                          : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+  102 |     grayscale_o <= (g_sum >= 8'd60) ? 8'd255: g_sum[7:0];
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h0' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h1' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h2' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h3' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h4' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h5' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h6' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h7' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h8' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h9' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'hb' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'hc' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'hd' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'he' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'hf' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h10' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h11' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h12' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h13' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h14' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h15' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h16' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h17' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h18' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h19' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h1a' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h1b' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h1c' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h1d' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h1e' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h1f' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h20' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h21' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h22' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h23' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h24' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h25' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h26' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h27' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h28' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h29' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h2a' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h2b' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h2c' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h2d' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h2e' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h2f' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h30' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h31' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h32' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h33' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h34' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h35' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h36' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h37' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h38' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h39' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h3a' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h3b' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h3c' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h3d' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h3e' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h3f' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h40' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h41' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h42' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h43' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h44' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h45' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h46' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h47' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h48' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h49' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h4a' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h4b' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h4c' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h4d' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h4e' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h4f' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h50' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h51' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h52' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h53' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h54' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h55' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h56' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h57' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h58' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h59' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h5a' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h5b' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h5c' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h5d' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h5e' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h5f' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h60' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h61' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h62' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h63' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h64' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h65' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h66' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h67' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h68' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h69' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h6a' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h6b' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h6c' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h6d' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h6e' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h6f' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h70' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h71' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h72' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h73' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h74' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h75' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h76' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h77' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h78' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h79' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h7a' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h7b' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h7c' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h7d' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h7e' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h7f' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h80' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h81' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h82' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h83' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h84' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h85' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h86' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h87' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h88' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h89' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h8a' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h8b' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h8c' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h8d' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h8e' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h8f' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h90' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h91' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h92' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h93' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h94' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h95' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h96' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h97' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h98' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h99' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h9a' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h9b' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h9c' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h9d' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h9e' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'h9f' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha0' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha1' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha2' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha3' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha4' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha5' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha6' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha7' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha8' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'ha9' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'haa' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'hab' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'hac' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'had' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'hae' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'haf' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/reg_init.v:22:5: Operator CASE expects 11 bits on the Case Item, but Case Item's CONST '8'hb0' generates 8 bits.
+                                                                      : ... In instance fpga_sobel_top.cam_mod_01.camera_init_01.init
+   22 |     case (count)
+      |     ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_control.v:22:30: Operator GTE expects 12 bits on the RHS, but RHS's VARREF 'x_before' generates 11 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01.control
+   22 |     assign is_display=((x_poi>=x_before)&&(x_poi<x_beside_after)
+      |                              ^~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_control.v:22:49: Operator LT expects 12 bits on the RHS, but RHS's VARREF 'x_beside_after' generates 11 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01.control
+   22 |     assign is_display=((x_poi>=x_before)&&(x_poi<x_beside_after)
+      |                                                 ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_control.v:23:13: Operator GTE expects 12 bits on the RHS, but RHS's VARREF 'y_before' generates 11 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01.control
+   23 |     &&(y_poi>=y_before)&&(y_poi<y_beside_after))?1:0;
+      |             ^~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_control.v:23:32: Operator LT expects 12 bits on the RHS, but RHS's VARREF 'y_beside_after' generates 11 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01.control
+   23 |     &&(y_poi>=y_before)&&(y_poi<y_beside_after))?1:0;
+      |                                ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_control.v:25:26: Operator LT expects 12 bits on the RHS, but RHS's VARREF 'x_sync' generates 11 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01.control
+   25 |     assign x_valid=(x_poi<x_sync)?0:1; 
+      |                          ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_control.v:26:26: Operator LT expects 12 bits on the RHS, but RHS's VARREF 'y_sync' generates 11 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01.control
+   26 |     assign y_valid=(y_poi<y_sync)?0:1; 
+      |                          ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/rgb_to_grascale.v:39:25: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's CONST '7'h0' generates 7 bits.
+                                                                              : ... In instance fpga_sobel_top.sobel_mod_01.rgb_to_grayscale_01
+   39 |     to_grayscale        <= 7'd0;
+      |                         ^~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/rgb_to_grascale.v:46:25: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's CONST '7'h0' generates 7 bits.
+                                                                              : ... In instance fpga_sobel_top.sobel_mod_01.rgb_to_grayscale_01
+   46 |       to_grayscale      <= 7'd0;
+      |                         ^~
+%Warning-WIDTHTRUNC: /openlane/designs/image_proc/src/grayscale_to_rgb.v:43:13: Operator ASSIGNDLY expects 1 bits on the Assign RHS, but Assign RHS's CONST '8'h0' generates 8 bits.
+                                                                              : ... In instance fpga_sobel_top.sobel_mod_01.grayscale_to_rgb_01
+   43 |     done_o  <= 8'd0;
+      |             ^~
+%Warning-WIDTHTRUNC: /openlane/designs/image_proc/src/cam_data_proc.v:73:20: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's DIV generates 32 or 9 bits.
+                                                                           : ... In instance fpga_sobel_top.cam_mod_01.cam_data_proc_01
+   73 |             red_mid=(green_mid2-blue_mid2+green_mid2+red_mid2)*red_mid2/256;
+      |                    ^
+%Warning-WIDTHTRUNC: /openlane/designs/image_proc/src/cam_data_proc.v:74:22: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's DIV generates 32 or 9 bits.
+                                                                           : ... In instance fpga_sobel_top.cam_mod_01.cam_data_proc_01
+   74 |             green_mid=(blue_mid2-green_mid2+blue_mid2+red_mid2)*red_mid2/256;
+      |                      ^
+%Warning-WIDTHTRUNC: /openlane/designs/image_proc/src/cam_data_proc.v:75:21: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's DIV generates 32 or 9 bits.
+                                                                           : ... In instance fpga_sobel_top.cam_mod_01.cam_data_proc_01
+   75 |             blue_mid=(blue_mid2-green_mid2+blue_mid2+red_mid2)*green_mid2/256;
+      |                     ^
+%Warning-WIDTHTRUNC: /openlane/designs/image_proc/src/cam_data_proc.v:79:20: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's ADD generates 32 or 10 bits.
+                                                                           : ... In instance fpga_sobel_top.cam_mod_01.cam_data_proc_01
+   79 |             red_mid=red_mid2*393/1000+green_mid2*769/1000+blue_mid2*189/1000;
+      |                    ^
+%Warning-WIDTHTRUNC: /openlane/designs/image_proc/src/cam_data_proc.v:80:22: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's ADD generates 32 or 10 bits.
+                                                                           : ... In instance fpga_sobel_top.cam_mod_01.cam_data_proc_01
+   80 |             green_mid=red_mid2*349/1000+green_mid2*686/1000+blue_mid2*168/1000;
+      |                      ^
+%Warning-WIDTHTRUNC: /openlane/designs/image_proc/src/cam_data_proc.v:81:21: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's ADD generates 32 or 10 bits.
+                                                                           : ... In instance fpga_sobel_top.cam_mod_01.cam_data_proc_01
+   81 |             blue_mid=red_mid2*272/1000+green_mid2*534/1000+blue_mid2*131/1000;
+      |                     ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_display.v:33:28: Operator SUB expects 19 bits on the LHS, but LHS's VARREF 'y_poi' generates 12 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01
+   33 |             ram_addr=(y_poi-y_before)*x_size_pic+(x_poi-x_before);
+      |                            ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_display.v:33:28: Operator SUB expects 19 bits on the RHS, but RHS's VARREF 'y_before' generates 11 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01
+   33 |             ram_addr=(y_poi-y_before)*x_size_pic+(x_poi-x_before);
+      |                            ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_display.v:33:56: Operator SUB expects 19 bits on the LHS, but LHS's VARREF 'x_poi' generates 12 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01
+   33 |             ram_addr=(y_poi-y_before)*x_size_pic+(x_poi-x_before);
+      |                                                        ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_display.v:33:56: Operator SUB expects 19 bits on the RHS, but RHS's VARREF 'x_before' generates 11 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01
+   33 |             ram_addr=(y_poi-y_before)*x_size_pic+(x_poi-x_before);
+      |                                                        ^
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_display.v:31:30: Operator LTE expects 12 bits on the RHS, but RHS's VARREF 'x_size_pic' generates 11 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01
+   31 |             if(x_poi-x_before<=x_size_pic&&y_poi-y_before<=y_size_pic)
+      |                              ^~
+%Warning-WIDTHEXPAND: /openlane/designs/image_proc/src/vga_display.v:31:58: Operator LTE expects 12 bits on the RHS, but RHS's VARREF 'y_size_pic' generates 11 bits.
+                                                                          : ... In instance fpga_sobel_top.vga_display_01
+   31 |             if(x_poi-x_before<=x_size_pic&&y_poi-y_before<=y_size_pic)
+      |                                                          ^~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/fpga_sobel_top.v:64:12: Signal is not used: 'sobel_done_o'
+                                                                              : ... In instance fpga_sobel_top
+   64 | wire       sobel_done_o;
+      |            ^~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/fpga_sobel_top.v:66:12: Bits of signal are not used: 'r_sobel_red_o'[7:4]
+                                                                              : ... In instance fpga_sobel_top
+   66 | reg  [7:0] r_sobel_red_o;
+      |            ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/fpga_sobel_top.v:67:12: Bits of signal are not used: 'r_sobel_green_o'[7:4]
+                                                                              : ... In instance fpga_sobel_top
+   67 | reg  [7:0] r_sobel_green_o;
+      |            ^~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/fpga_sobel_top.v:68:12: Bits of signal are not used: 'r_sobel_blue_o'[7:4]
+                                                                              : ... In instance fpga_sobel_top
+   68 | reg  [7:0] r_sobel_blue_o;
+      |            ^~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/fpga_sobel_top.v:90:19: Signal is not used: 'cam_pwd_o'
+                                                                              : ... In instance fpga_sobel_top
+   90 |   .cam_pwd_o     (cam_pwd_o),
+      |                   ^~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/cam_data_proc.v:2:23: Signal is not used: 'clk'
+                                                                            : ... In instance fpga_sobel_top.cam_mod_01.cam_data_proc_01
+    2 |     input             clk,
+      |                       ^~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/cam_data_capt.v:2:11: Signal is not used: 'rst'
+                                                                            : ... In instance fpga_sobel_top.cam_mod_01.cam_data_capt_01
+    2 |     input rst,
+      |           ^~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/cam_data_capt.v:13:16: Bits of signal are not used: 'rgb565'[11]
+                                                                             : ... In instance fpga_sobel_top.cam_mod_01.cam_data_capt_01
+   13 |     reg [15:0] rgb565 = 0;
+      |                ^~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/sobel_kernel.v:35:12: Signal is not driven, nor used: 'grayscale_o'
+                                                                            : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01
+   35 | wire [7:0] grayscale_o;
+      |            ^~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/sobel_kernel.v:36:12: Signal is not driven, nor used: 'done_o'
+                                                                            : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01
+   36 | wire       done_o;
+      |            ^~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/sobel_calc.v:31:20: Signal is not used: 'd4_i'
+                                                                          : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_calc_01
+   31 |   input      [7:0] d4_i,
+      |                    ^~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/image_proc/src/fifo_double_line_buffer.v:40:12: Signal is not used: 'fifo2_done'
+                                                                                       : ... In instance fpga_sobel_top.sobel_mod_01.sobel_kernel_01.sobel_data_buffer_01.fifo_double_line_buffer_01
+   40 | wire       fifo2_done;
+      |            ^~~~~~~~~~
+%Warning-CASEINCOMPLETE: /openlane/designs/image_proc/src/reg_init.v:22:5: Case values incompletely covered (example pattern 0xb1)
+   22 |     case (count)
+      |     ^~~~
+%Warning-BLKSEQ: /openlane/designs/image_proc/src/cam_data_capt.v:24:23: Blocking assignment '=' in sequential logic process
+                                                                       : ... Suggest using delayed assignment '<='
+   24 |                 status=0;
+      |                       ^

@@ -1,0 +1,3 @@
+[ERROR] file not found /root/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/extra_mapping.tcl.
+[ERROR] file not found /root/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/extra_mapping.tcl.
+ABC: Error: The network is combinational.
