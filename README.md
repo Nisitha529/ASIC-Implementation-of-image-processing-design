@@ -31,7 +31,7 @@ Camera → RGB Capture → Grayscale Conversion → Line Buffers → Sobel Kerne
 
 #### SCCB Communication (sccb_sender.v)
 - Implements the Serial Camera Control Bus (SCCB) protocol for camera register configuration. Handles timing and data transmission to the camera.
-
+  
 #### Register Initialization (reg_init.v)
 - Stores the complete set of camera register values required for proper OV7670 operation. Contains over 175 register settings for resolution, color format, and exposure.
 
