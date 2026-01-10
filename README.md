@@ -31,7 +31,7 @@ Camera → RGB Capture → Grayscale Conversion → Line Buffers → Sobel Kerne
 
 #### SCCB Communication (sccb_sender.v)
 - Implements the Serial Camera Control Bus (SCCB) protocol for camera register configuration. Handles timing and data transmission to the camera.
-
+  
 #### Register Initialization (reg_init.v)
 - Stores the complete set of camera register values required for proper OV7670 operation. Contains over 175 register settings for resolution, color format, and exposure.
 
@@ -63,6 +63,8 @@ Camera → RGB Capture → Grayscale Conversion → Line Buffers → Sobel Kerne
 <img width="2048" height="1282" alt="Resulting image" src="https://github.com/user-attachments/files/22249178/result7.bmp" />
 
 ## ASIC implementation for the RTL based sobel detection design.
+<img width="780" height="785" alt="GDS Layout" src="https://github.com/user-attachments/assets/f21d98a3-ff72-41d1-a3a8-ee74c6a8e8b8" />
+
 
 ### Synthesis overview
 - The fpga_sobel_top design was successfully synthesized, producing a fully optimized gate-level netlist. The synthesis results confirm that all intended logic functions are correctly mapped to the target SkyWater 130nm standard cell library, ensuring functional correctness and efficient resource utilization.
