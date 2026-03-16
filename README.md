@@ -15,7 +15,7 @@ This project implements a complete hardware implementation for real-time image e
 - Full Hardware Implementation: All processing done in FPGA fabric
 - Modular Design: Easily extensible for different image processing algorithms
 - Sobel Operator: 3x3 convolution for horizontal and vertical edge detection
-
+  
 ### Hardware Architecture
 The following system follows a pipelined processing flow.
 The video feed from the camera module will be go through the Grayscale conversion. Then those data would be fed into line buffers. Sobel kernel implementation would operate on the image data and then would push the computed data out. Then the edge magnitude calculation will be carried out. The processed data would be arranged for the VGA display.
