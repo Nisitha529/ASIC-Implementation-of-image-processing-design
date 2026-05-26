@@ -5,7 +5,7 @@ This project implements a complete hardware implementation for real-time image e
 1. Designing of RTL based sobel edge detection system.
 2. ASIC implementation for the RTL based sobel detection design.
 3. ZYNQ PS based verification approach for the sobel RTL implementation.
-   
+
 ## Designing of RTL based sobel edge detection system
 
 ### Key Features
